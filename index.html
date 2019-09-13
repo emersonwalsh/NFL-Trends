@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<!-- TODO
+- Click on Team to go to dahsboard (zoom in / change dimensions to expand card to full container animation)
+    1. bring in frameworkd
+    2. set active id on click
+    3. toggle class of selected (expand)
+    4. toggle class of other cards (hide)
+- show back arrow to navigate to home
+- Dashboard Design:
+    text of number of division titles, conference championships, and superbowls
+    smooth line chart number of wins per season over the past X years
+    bar chart of points scored and points scored against over the past X years
+    pie chart of games won vs lost (# and %)
+    arrow trending up or down
+-->
+
+<html ang="en">
+<head>
+    <meta charset="utf-8">
+    <title>NFL Trends</title>
+    <!-- <link rel="icon" href="./resources/favicon.png"> -->
+    <link rel="stylesheet/less" type="text/css" href="resources/styles.less" />
+    <!-- SASS -->
+    <script src="./resources/third-party/less.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<body>
+    <div class="header" id="nfl-logo">
+        <img src="./resources/img/nfl-logo1.png">
+    </div>
+    <div class="container">
+        <div class="cards" id="cardinals-card">
+            <div class="card-item">
+                <div class="card-image" id="cardinals"></div>
+            </div>
+        </div>
+        <div class="cards" id="falcons-card">
+            <div class="card-item">
+                <div class="card-image" id="falcons"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="ravens"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="bills"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="panthers"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="bears"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="bengals"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="browns"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="cowboys"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="broncos"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="lions"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="packers"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="texans"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="colts"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="jaguars"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="chiefs"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="chargers"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="rams"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="dolphins"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="vikings"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="patriots"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="saints"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="giants"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="jets"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="raiders"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="eagles"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="steelers"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="fourtyniners"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="seahawks"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="buccaneers"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="titans"></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-item">
+                <div class="card-image" id="redskins"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

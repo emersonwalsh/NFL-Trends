@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+// Colors
+@dark-blue: #32325d;
+@gray: #f8f8f8;
+
+// Dimension
+@header-height: 150px;
+@border-radius: 12px;
+
+// Mobile first
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+html {
+  background-color: @gray;
+}
+
+body {
+  font-family: 'Raleway',Sans-serif;
+  color: @dark-blue;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+}
+
+// Header
+.header {
+  position: absolute;
+  top:0;
+  left: 0;
+  height: @header-height;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    height: 80%;
+    cursor: pointer;
+  }
+}
+
+//Flex container
+.container {
+  display: flex;
+  -webkit-display: box;
+  -moz-display: box;
+  -ms-display: flexbox;
+  -webkit-display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: 0;
+  position: absolute;
+  top: @header-height;
+  left: 0;
+  height: calc(100% - @header-height);
+  width: 100%;
+}
+
+// Cards
+.cards {
+  display: flex;
+  padding: 1rem;
+  width: 50%;
+  height: 100%;
+  -webkit-transition: all 2s ease;  
+  -moz-transition: all 2s ease;  
+  -o-transition: all 2s ease;  
+  -ms-transition: all 2s ease;  
+  transition: all 2s ease;
+
+  // Responsive
+  @media(min-width: 35rem) {
+    width: 25%;
+  }
+  @media(min-width: 65rem) {
+    width: 12.5%;
+  }
+  @media(min-height: 25rem) {
+    height: 50%;
+  }
+  @media(min-height: 32rem) {
+    height: 33.33%;
+  }
+  @media(min-height: 40rem) {
+    height: 25%;
+  }
+
+  .card-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: @border-radius;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    overflow: hidden;
+    transition: transform 0.25s;
+    -webkit-transition: transform 0.25s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.15);
+      -webkit-transform: scale(1.15);
+      .card-image {
+        opacity: 1;
+      }
+    }
+  }
+
+  // Content
+  .card-info {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+    line-height: 1.5em;
+  }
+
+  .card-title {
+    font-size: 25px;
+    line-height: 1.1em;
+    color: #32325d;
+    margin-bottom: 0.2em;
+  }
+
+  // Images
+  .card-image {
+    height: 100%;
+    overflow: hidden;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: @border-radius @border-radius 0px 0px;
+    opacity: 0.88;
+  }
+
+  // Teaam Images
+  #cardinals {
+    background-image: url(./img/teams/arizona_cardinals.png);
+  }
+  #falcons {
+    background-image: url(./img/teams/atlanta_falcons.png);
+  }
+  #ravens {
+    background-image: url(./img/teams/baltimore_ravens.png);
+  }
+  #bills {
+    background-image: url(./img/teams/buffalo_bills.png);
+  }
+  #panthers {
+    background-image: url(./img/teams/carolina_panthers.png);
+  }
+  #bears {
+    background-image: url(./img/teams/chicago_bears.png);
+  }
+  #bengals {
+    background-image: url(./img/teams/cincinnati_bengals.png);
+  }
+  #browns {
+    background-image: url(./img/teams/cleveland_browns.png);
+  }
+  #cowboys {
+    background-image: url(./img/teams/dallas_cowboys.png);
+  }
+  #broncos {
+    background-image: url(./img/teams/denver_broncos.png);
+  }
+  #lions {
+    background-image: url(./img/teams/detroit_lions.png);
+  }
+  #packers {
+    background-image: url(./img/teams/greenbay_packers.png);
+  }
+  #texans {
+    background-image: url(./img/teams/houstan_texans.png);
+  }
+  #colts {
+    background-image: url(./img/teams/indianapolis_colts.png);
+  }
+  #jaguars {
+    background-image: url(./img/teams/jacksonville_jaguars.png);
+  }
+  #chiefs {
+    background-image: url(./img/teams/kansascity_chiefs.png);
+  }
+  #chargers {
+    background-image: url(./img/teams/losangeles_chargers.png);
+  }
+  #rams {
+    background-image: url(./img/teams/losangeles_rams.png);
+  }
+  #dolphins {
+    background-image: url(./img/teams/miami_dolphins.png);
+  }
+  #vikings {
+    background-image: url(./img/teams/minnesota_vikings.png);
+  }
+  #patriots {
+    background-image: url(./img/teams/newengland_patriots.png);
+  }
+  #saints {
+    background-image: url(./img/teams/neworleans_saints.png);
+  }
+  #giants {
+    background-image: url(./img/teams/newyork_giants.png);
+  }
+  #jets {
+    background-image: url(./img/teams/newyork_jets.png);
+  }
+  #raiders {
+    background-image: url(./img/teams/oakland_raiders.png);
+  }
+  #eagles {
+    background-image: url(./img/teams/philadelphia_eagles.png);
+  }
+  #steelers {
+    background-image: url(./img/teams/pittsburgh_steelers.png);
+  }
+  #fourtyniners {
+    background-image: url(./img/teams/sanfrancisco_49ers.png);
+  }
+  #seahawks {
+    background-image: url(./img/teams/seattle_seahawks.png);
+  }
+  #buccaneers {
+    background-image: url(./img/teams/tampabay_buccaneers.png);
+  }
+  #titans {
+    background-image: url(./img/teams/tennessee_titans.png);
+  }
+  #redskins {
+    background-image: url(./img/teams/washington_redskins.png);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  display: none;
+}
+
+.dashboard {
+  height: 400px;
+  width: 100%;
+}
